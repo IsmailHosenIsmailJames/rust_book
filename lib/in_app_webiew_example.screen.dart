@@ -2,6 +2,7 @@ import 'dart:collection';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -187,6 +188,7 @@ class _InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
           );
 
     initLastWebUrl();
+    FlutterNativeSplash.remove();
   }
 
   @override

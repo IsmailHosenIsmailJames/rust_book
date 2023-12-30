@@ -3,13 +3,16 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 import 'package:rust_book/in_app_webiew_example.screen.dart';
 
 final localhostServer = InAppLocalhostServer(documentRoot: 'assets');
 
 Future main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
     await InAppWebViewController.setWebContentsDebuggingEnabled(kDebugMode);

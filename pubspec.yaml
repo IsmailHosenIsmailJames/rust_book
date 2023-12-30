@@ -30,6 +30,7 @@ dependencies:
   flutter_inappwebview: ^6.0.0
   shared_preferences: ^2.2.2
   flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.8
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +64,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/img/logo.png
     - assets/book/iterators.html
     - assets/book/lifetimes.html
     - assets/book/ch16-04-extensible-concurrency-sync-and-send.html
