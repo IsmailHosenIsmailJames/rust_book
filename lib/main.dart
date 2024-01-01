@@ -4,14 +4,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-
-import 'package:rust_book/in_app_webiew_example.screen.dart';
+import 'package:rust_book/rust_doc.dart';
 
 final localhostServer = InAppLocalhostServer(documentRoot: 'assets');
 
 Future main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
@@ -35,12 +33,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.dark,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => InAppWebViewExampleScreen(),
-      },
+      theme: ThemeData.light(useMaterial3: true),
+      darkTheme: ThemeData.dark(useMaterial3: true),
+      home: InAppWebViewExampleScreen(),
     );
   }
 }
