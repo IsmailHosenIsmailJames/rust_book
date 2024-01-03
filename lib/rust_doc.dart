@@ -41,7 +41,7 @@ class InAppWebViewExampleScreenState extends State<InAppWebViewExampleScreen> {
   void initLastWebUrl() async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     String initUrl = prefs.getString("last_url") ??
-        "file:///android_asset/flutter_assets/assets/index.html";
+        "file:///android_asset/flutter_assets/assets/book/index.html";
     makeAppBarTitle(initUrl);
     setState(() {
       initWiget = InAppWebView(
