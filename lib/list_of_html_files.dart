@@ -110,6 +110,7 @@ const List<String> allHTMLFilesPathSorted = <String>[
   "ch20-03-graceful-shutdown-and-cleanup.html",
   "choosing-your-guarantees.html",
   "closures.html",
+  "comments.html",
   "compiler-plugins.html",
   "concurrency.html",
   "conditional-compilation.html",

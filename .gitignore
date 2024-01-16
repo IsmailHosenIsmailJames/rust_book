@@ -4,7 +4,6 @@
 *.log
 *.pyc
 *.swp
-*.py
 *.txt
 .DS_Store
 .atom/
